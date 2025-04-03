@@ -64,7 +64,9 @@ class _MathHomeState extends State<MathHome> {
 
   @override
   Widget build(BuildContext context) {
-   var numberInputFormatters = [new FilteringTextInputFormatter.allow(RegExp("[0-9]")),];
+    var numberInputFormatters = [
+      new FilteringTextInputFormatter.allow(RegExp("[0-9]")),
+    ];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Math Calculator', style: TextStyle(color: Color.fromARGB(255, 8, 7, 7), fontSize: 30)),
@@ -93,48 +95,50 @@ class _MathHomeState extends State<MathHome> {
               children: [
                 TextField(
                   controller: num1Controller,
-                   inputFormatters: numberInputFormatters,
+                  inputFormatters: numberInputFormatters,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     labelText: 'Enter first number',
                     border: OutlineInputBorder(),
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.8),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0), // Adjusted padding for smaller box
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 TextField(
                   controller: num2Controller,
-                   inputFormatters: numberInputFormatters,
+                  inputFormatters: numberInputFormatters,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     labelText: 'Enter second number',
                     border: OutlineInputBorder(),
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.8),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0), // Adjusted padding for smaller box
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton(onPressed: () => calculate('Add'), child: const Text('Add',style: TextStyle(color: Color.fromARGB(255, 20, 20, 20),fontSize:20))),
-                    ElevatedButton(onPressed: () => calculate('Subtract'), child: const Text('Subtract',style: TextStyle(color: Color.fromARGB(255, 20, 20, 20),fontSize:20))),
+                    ElevatedButton(onPressed: () => calculate('Add'), child: const Text('Add', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
+                    ElevatedButton(onPressed: () => calculate('Subtract'), child: const Text('Subtract', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton(onPressed: () => calculate('Multiply'), child: const Text('Multiply', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20),fontSize:20))),
-                    ElevatedButton(onPressed: () => calculate('Divide'), child: const Text('Divide',style: TextStyle(color: Color.fromARGB(255, 20, 20, 20),fontSize:20))),
+                    ElevatedButton(onPressed: () => calculate('Multiply'), child: const Text('Multiply', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
+                    ElevatedButton(onPressed: () => calculate('Divide'), child: const Text('Divide', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
                   ],
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: clearFields,
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                  child: const Text('Cancel', style: TextStyle(color: Colors.white,fontSize:30)),
+                  child: const Text('Cancel', style: TextStyle(color: Colors.white, fontSize: 30)),
                 ),
                 const SizedBox(height: 10),
                 Text(
