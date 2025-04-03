@@ -69,7 +69,7 @@ class _MathHomeState extends State<MathHome> {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Math Calculator', style: TextStyle(color: Color.fromARGB(255, 8, 7, 7), fontSize: 30)),
+        title: const Text('Math Calculator', style: TextStyle(color: Color.fromARGB(255, 8, 7, 7), fontSize: 30,fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Colors.teal,
       ),
@@ -122,16 +122,16 @@ class _MathHomeState extends State<MathHome> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton(onPressed: () => calculate('Add'), child: const Text('Add', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
-                    ElevatedButton(onPressed: () => calculate('Subtract'), child: const Text('Subtract', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
+                    ElevatedButton(onPressed: () => calculate('Add'), child: const Text('Add', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20,fontWeight: FontWeight.bold))),
+                    ElevatedButton(onPressed: () => calculate('Subtract'), child: const Text('Subtract', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20,fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton(onPressed: () => calculate('Multiply'), child: const Text('Multiply', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
-                    ElevatedButton(onPressed: () => calculate('Divide'), child: const Text('Divide', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20))),
+                    ElevatedButton(onPressed: () => calculate('Multiply'), child: const Text('Multiply', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20,fontWeight: FontWeight.bold))),
+                    ElevatedButton(onPressed: () => calculate('Divide'), child: const Text('Divide', style: TextStyle(color: Color.fromARGB(255, 20, 20, 20), fontSize: 20,fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 10),
