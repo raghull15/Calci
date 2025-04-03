@@ -102,7 +102,7 @@ class _MathHomeState extends State<MathHome> {
                     border: OutlineInputBorder(),
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.8),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0), // Adjusted padding for smaller box
+                    contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0), 
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -115,7 +115,7 @@ class _MathHomeState extends State<MathHome> {
                     border: OutlineInputBorder(),
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.8),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0), // Adjusted padding for smaller box
+                    contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0), 
                   ),
                 ),
                 const SizedBox(height: 20),
